@@ -2,6 +2,7 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QMessageBox, QMainWindow
 from data.user import UserData
 from models.user import User
+from gui.main import MainWindow
 
 
 class Login:
@@ -31,7 +32,9 @@ class Login:
             )
             res = UserData().login(user)
             if res:
-                self.login.txterror.setText("OK")
+                # self.login.txterror.setText("OK")
+                self.main = MainWindow()
+                self.login.hide()
             else:
                 self.login.txterror.setText("Usuario o contraseña incorrectos")
 
