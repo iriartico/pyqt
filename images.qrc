@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="route">
+    <file>../../Pictures/favicon.png</file>
+  </qresource>
+</RCC>
