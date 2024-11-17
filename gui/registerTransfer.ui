@@ -5,6 +5,9 @@
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,34 +16,55 @@
     <height>382</height>
    </rect>
   </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::WheelFocus</enum>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::PreventContextMenu</enum>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Registrar Transacciones</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QLabel" name="label">
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QLabel" name="logo">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>30</y>
-     <width>71</width>
-     <height>81</height>
+     <x>60</x>
+     <y>50</y>
+     <width>101</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../Pictures/favicon.png</pixmap>
+    <pixmap>../banco-mercantil.png</pixmap>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="Titulo">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>180</x>
      <y>50</y>
-     <width>301</width>
+     <width>371</width>
      <height>41</height>
     </rect>
    </property>
@@ -99,13 +123,13 @@
     <bool>false</bool>
    </property>
    <property name="autoFillBackground">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="editable">
     <bool>false</bool>
    </property>
    <property name="currentText">
-    <string>--- Seleccione una opción ---</string>
+    <string notr="true">--- Seleccione una opción ---</string>
    </property>
    <property name="frame">
     <bool>false</bool>
@@ -131,7 +155,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="nroDocumento">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -164,7 +188,7 @@
     <string>Número de documento</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="tipoDocumento_2">
+  <widget class="QComboBox" name="motivo">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -217,7 +241,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="monto">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -333,6 +357,8 @@ border-radius: 8px;</string>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../static.qrc"/>
+ </resources>
  <connections/>
 </ui>
